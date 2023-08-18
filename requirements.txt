@@ -1,0 +1,3 @@
+streamlit
+replicate == 0.10.0
+
