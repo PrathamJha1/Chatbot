@@ -68,6 +68,7 @@ if(st.session_state.auth == False):
                 st.session_state.auth = True
                 st.session_state.username = username
                 st.toast("Logged in successfully")
+                st.write("Navigate to home page to utilize the chatbot")
             else:
                 st.toast("Invalid username or password")
             username =""

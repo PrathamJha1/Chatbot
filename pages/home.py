@@ -27,6 +27,7 @@ if (st.session_state.auth):
         if logout_button:
             st.session_state.auth = False
             st.session_state.username = ''
+            st.experimental_rerun()
         
     os.environ['REPLICATE_API_TOKEN'] = replicate_api
 
