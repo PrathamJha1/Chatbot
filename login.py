@@ -39,7 +39,6 @@ def check_credentials(username, password):
         if entry["username"] == username and entry["password"] == password:
             return True  # Found a matching username and password
     return False
-
 if(st.session_state.auth == False):
     page = st.sidebar.radio("Select an action:", ["Login", "Signup"])
 if(st.session_state.auth == False):
@@ -69,6 +68,7 @@ if(st.session_state.auth == False):
                 st.session_state.username = username
                 st.toast("Logged in successfully")
                 st.write("Navigate to home page to utilize the chatbot")
+                st.experimental_rerun()
             else:
                 st.toast("Invalid username or password")
             username =""
