@@ -1,6 +1,9 @@
 import streamlit as st
 from pymongo import MongoClient
 
+
+st.set_page_config(page_title="AI Chatbot")
+
 if "auth" not in st.session_state:
     st.session_state["auth"] = False
 if "username" not in st.session_state:
@@ -68,7 +71,7 @@ if(st.session_state.auth == False):
                 st.session_state.username = username
                 st.toast("Logged in successfully")
                 st.write("Navigate to home page to utilize the chatbot")
-                st.experimental_rerun()
+                st.experimental_set_query_params('/home')
             else:
                 st.toast("Invalid username or password")
             username =""
