@@ -77,4 +77,4 @@ if (st.session_state.auth):
         message = {"role": "assistant", "content": full_response}
         st.session_state.messages.append(message)
 else:
-    st.write("Please login/sign up to view this page")
+    st.title("Please login/sign up to view this page")

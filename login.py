@@ -70,8 +70,10 @@ if(st.session_state.auth == False):
                 st.session_state.username = username
                 st.toast("Logged in successfully")
                 st.write("Navigate to home page to utilize the chatbot")
-                st.experimental_set_query_params('/home')
             else:
                 st.toast("Invalid username or password")
             username =""
             password =""
+
+else:
+    st.title("Redirect to home page to use Chatbot")
