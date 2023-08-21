@@ -4,6 +4,11 @@ import os
 
 # App title
 st.set_page_config(page_title="AI Chatbot")
+
+if "auth" not in st.session_state:
+    st.session_state["auth"] = False
+if "username" not in st.session_state:
+    st.session_state['username'] = ''
 if (st.session_state.auth):
     # Replicate Credentials
     with st.sidebar:
